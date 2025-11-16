@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermes</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link rel="favico" href="../img/favico.ico">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <a href="index.html" class="navbar-logo">
+                    <img src="../img/hermes.jpeg"/>
+                    <img src="../img/favico.ico">
+                </a>
+                <div class="navbar-links">
+                    <a href="index.html" class="nav-link">Inici</a>
+                    <a href="movies.html" class="nav-link">Pel·lícules</a>
+                    <a href="series.html" class="nav-link">Sèries</a>
+                </div>
+            </div>
+            
+            <div class="navbar-right">
+                <!-- Mode Selector -->
+                <div class="mode-selector-container" id="modeSelector">
+                    <button class="mode-selector-btn" id="modeSelectorBtn">
+                        Mode: <span id="currentMode">Normal</span>
+                    </button>
+                    
+                    <div class="mode-dropdown" id="modeDropdown" style="display: none;">
+                        <button class="mode-option active" data-mode="normal">
+                            🎬 Mode Normal
+                        </button>
+                        <button class="mode-option" data-mode="mixed">
+                            🎭 Mode Mixt
+                        </button>
+                        <button class="mode-option" data-mode="anime">
+                            🎌 Mode Anime
+                        </button>
+                    </div>
+                </div>
+
+                <button class="nav-button scan-button" id="scanBtn" title="Escanejar biblioteca">
+                    🔄
+                </button>
+                
+                <div class="profile-menu-container" id="profileMenu">
+                    <button class="profile-button">
+                        <span class="profile-avatar">
+                            <img src="../img/favico.ico" class="profile-avatar">
+                        </span>
+                    </button>
+                    
+                    <div class="profile-dropdown" id="profileDropdown" style="display: none;">
+                        <div class="profile-info">
+                            <div class="profile-name">Usuari</div>
+                            <div class="profile-email">user@hermes.cat</div>
+                        </div>
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                        <button class="dropdown-item">⚙️ Configuració</button>
+                        <button class="dropdown-item">📊 Estadístiques</button>
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                        <button class="dropdown-item logout">🚪 Tancar sessió</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="home-container">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <!-- Animated background -->
+                <div class="animated-bg">
+                    <div class="bubble bubble-1"></div>
+                    <div class="bubble bubble-2"></div>
+                </div>
+
+                <!-- Content -->
+                <div class="hero-content">
+                    <!-- Search bar -->
+                    <div class="search-bar">
+                        <input type="text" placeholder="Què et ve de gust veure?" />
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+
+                    <!-- Categories Grid -->
+                    <div class="categories-grid">
+                        <!-- Pel·lícules -->
+                        <a href="movies.html" class="category-card active" data-category="movies">
+                            <div class="card-glass"></div>
+                            
+                            <div class="hover-bubbles">
+                                <div class="floating-bubble bubble-1 gradient-movies"></div>
+                                <div class="floating-bubble bubble-2 gradient-movies"></div>
+                                <div class="floating-bubble bubble-3 gradient-movies"></div>
+                            </div>
+                            
+                            <div class="card-content">
+                                <svg class="card-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                                    <line x1="7" y1="2" x2="7" y2="22"></line>
+                                    <line x1="17" y1="2" x2="17" y2="22"></line>
+                                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                                    <line x1="2" y1="7" x2="7" y2="7"></line>
+                                    <line x1="2" y1="17" x2="7" y2="17"></line>
+                                    <line x1="17" y1="17" x2="22" y2="17"></line>
+                                    <line x1="17" y1="7" x2="22" y2="7"></line>
+                                </svg>
+                                <h3 class="card-title">Pel·lícules</h3>
+                            </div>
+
+                            <div class="hover-border"></div>
+                        </a>
+
+                        <!-- Sèries -->
+                        <a href="series.html" class="category-card active" data-category="series">
+                            <div class="card-glass"></div>
+                            
+                            <div class="hover-bubbles">
+                                <div class="floating-bubble bubble-1 gradient-series"></div>
+                                <div class="floating-bubble bubble-2 gradient-series"></div>
+                                <div class="floating-bubble bubble-3 gradient-series"></div>
+                            </div>
+                            
+                            <div class="card-content">
+                                <svg class="card-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                                    <polyline points="17 2 12 7 7 2"></polyline>
+                                </svg>
+                                <h3 class="card-title">Sèries</h3>
+                            </div>
+
+                            <div class="hover-border"></div>
+                        </a>
+
+                        <!-- Sèries Animades -->
+                        <div class="category-card inactive" data-category="anime-series">
+                            <div class="card-glass"></div>
+                            
+                            <div class="hover-bubbles">
+                                <div class="floating-bubble bubble-1 gradient-anime-series"></div>
+                                <div class="floating-bubble bubble-2 gradient-anime-series"></div>
+                                <div class="floating-bubble bubble-3 gradient-anime-series"></div>
+                            </div>
+                            
+                            <div class="card-content">
+                                <svg class="card-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                                <h3 class="card-title">Sèries Animades</h3>
+                                <span class="coming-soon">Properament</span>
+                            </div>
+                        </div>
+
+                        <!-- Llibres -->
+                        <div class="category-card inactive" data-category="books">
+                            <div class="card-glass"></div>
+                            
+                            <div class="hover-bubbles">
+                                <div class="floating-bubble bubble-1 gradient-books"></div>
+                                <div class="floating-bubble bubble-2 gradient-books"></div>
+                                <div class="floating-bubble bubble-3 gradient-books"></div>
+                            </div>
+                            
+                            <div class="card-content">
+                                <svg class="card-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                </svg>
+                                <h3 class="card-title">Llibres</h3>
+                                <span class="coming-soon">Properament</span>
+                            </div>
+                        </div>
+
+                        <!-- Audiollibres -->
+                        <div class="category-card inactive" data-category="audiobooks">
+                            <div class="card-glass"></div>
+                            
+                            <div class="hover-bubbles">
+                                <div class="floating-bubble bubble-1 gradient-audiobooks"></div>
+                                <div class="floating-bubble bubble-2 gradient-audiobooks"></div>
+                                <div class="floating-bubble bubble-3 gradient-audiobooks"></div>
+                            </div>
+                            
+                            <div class="card-content">
+                                <svg class="card-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                                </svg>
+                                <h3 class="card-title">Audiollibres</h3>
+                                <span class="coming-soon">Properament</span>
+                            </div>
+                        </div>
+
+                        <!-- Televisió -->
+                        <div class="category-card inactive" data-category="tv">
+                            <div class="card-glass"></div>
+                            
+                            <div class="hover-bubbles">
+                                <div class="floating-bubble bubble-1 gradient-tv"></div>
+                                <div class="floating-bubble bubble-2 gradient-tv"></div>
+                                <div class="floating-bubble bubble-3 gradient-tv"></div>
+                            </div>
+                            
+                            <div class="card-content">
+                                <svg class="card-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M2 8.5c0-1 0-1.5.3-1.9.2-.3.5-.5.9-.6.4-.2.9-.2 1.9-.2h13.8c1 0 1.5 0 1.9.2.4.1.7.3.9.6.3.4.3.9.3 1.9v7c0 1 0 1.5-.3 1.9-.2.3-.5.5-.9.6-.4.2-.9.2-1.9.2H5.1c-1 0-1.5 0-1.9-.2-.4-.1-.7-.3-.9-.6-.3-.4-.3-.9-.3-1.9v-7z"></path>
+                                    <path d="M12 5.5v.01M8 2l4 3.5L16 2"></path>
+                                </svg>
+                                <h3 class="card-title">Televisió</h3>
+                                <span class="coming-soon">Properament</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../static/js/script.js"></script>
+</body>
+</html>

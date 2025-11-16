@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sèries - HERMES</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/library.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <a href="index.html" class="navbar-logo">
+                    <span class="logo-text">HERMES</span>
+                    <span class="logo-icon">🎬</span>
+                </a>
+                
+                <div class="navbar-links">
+                    <a href="index.html" class="nav-link">Inici</a>
+                    <a href="movies.html" class="nav-link">Pel·lícules</a>
+                    <a href="series.html" class="nav-link active">Sèries</a>
+                </div>
+            </div>
+            
+            <div class="navbar-right">
+                <!-- Mode Selector -->
+                <div class="mode-selector-container" id="modeSelector">
+                    <button class="mode-selector-btn" id="modeSelectorBtn">
+                        Mode: <span id="currentMode">Normal</span>
+                    </button>
+                    
+                    <div class="mode-dropdown" id="modeDropdown" style="display: none;">
+                        <button class="mode-option active" data-mode="normal">
+                            🎬 Mode Normal
+                        </button>
+                        <button class="mode-option" data-mode="mixed">
+                            🎭 Mode Mixt
+                        </button>
+                        <button class="mode-option" data-mode="anime">
+                            🎌 Mode Anime
+                        </button>
+                    </div>
+                </div>
+
+                <button class="nav-button scan-button" id="scanBtn" title="Escanejar biblioteca">
+                    🔄
+                </button>
+                
+                <div class="profile-menu-container" id="profileMenu">
+                    <button class="profile-button">
+                        <span class="profile-avatar">U</span>
+                    </button>
+                    
+                    <div class="profile-dropdown" id="profileDropdown" style="display: none;">
+                        <div class="profile-info">
+                            <div class="profile-name">Usuari</div>
+                            <div class="profile-email">user@hermes.cat</div>
+                        </div>
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                        <button class="dropdown-item">⚙️ Configuració</button>
+                        <button class="dropdown-item">📊 Estadístiques</button>
+                        
+                        <div class="dropdown-divider"></div>
+                        
+                        <button class="dropdown-item logout">🚪 Tancar sessió</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="library-container">
+            <div class="library-header">
+                <h1 class="library-title">Sèries</h1>
+                <p class="library-subtitle" id="modeSubtitle">Mode Normal</p>
+            </div>
+
+            <!-- Loading State -->
+            <div class="loading-state" id="loadingState">
+                <div class="loading-spinner"></div>
+                <p>Carregant sèries...</p>
+            </div>
+
+            <!-- Series Grid -->
+            <div class="media-grid" id="seriesGrid" style="display: none;">
+                <!-- Series will be loaded here dynamically -->
+            </div>
+
+            <!-- Empty State -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <div class="empty-icon">📺</div>
+                <h2>No s'han trobat sèries</h2>
+                <p>Escaneja la biblioteca per afegir contingut</p>
+                <button class="btn-primary" onclick="document.getElementById('scanBtn').click()">
+                    Escanejar ara
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../static/js/script.js"></script>
+    <script src="../static/js/movies.js"></script>
+    <script src="../static/js/series.js"></script>
+</body>
+</html>
