@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hermes</title>
+    <title>Hermes - El transport més ràpid de l'olimp</title>
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
     <link rel="favico" href="img/favico.ico">
@@ -21,38 +21,18 @@
                     <a href="index.html" class="nav-link">Inici</a>
                     <a href="public/movies.html" class="nav-link">Pel·lícules</a>
                     <a href="public/series.html" class="nav-link">Sèries</a>
+                    <a href="" class="nav-link">Programes</a>
+                    <a href="" class="nav-link">Llibres</a>
+                    <a href="" class="nav-link">Audiollibres</a>
+                    <a href="" class="nav-link">Televisió</a>
                 </div>
             </div>
-            
+
             <div class="navbar-right">
                 <!-- Mode Selector -->
-                <div class="mode-selector-container" id="modeSelector">
-                    <button class="mode-selector-btn" id="modeSelectorBtn">
-                        Mode: <span id="currentMode">Normal</span>
-                    </button>
-                    
-                    <div class="mode-dropdown" id="modeDropdown" style="display: none;">
-                        <button class="mode-option active" data-mode="normal">
-                            🎬 Mode Normal
-                        </button>
-                        <button class="mode-option" data-mode="mixed">
-                            🎭 Mode Mixt
-                        </button>
-                        <button class="mode-option" data-mode="anime">
-                            🎌 Mode Anime
-                        </button>
-                    </div>
-                </div>
-
-                <button class="nav-button scan-button" id="scanBtn" title="Escanejar biblioteca">
-                    🔄
-                </button>
-                
                 <div class="profile-menu-container" id="profileMenu">
                     <button class="profile-button">
-                        <span class="profile-avatar">
-                            <img src="img/favico.ico" class="profile-avatar">
-                        </span>
+                        <span class="profile-avatar">È</span>
                     </button>
                     
                     <div class="profile-dropdown" id="profileDropdown" style="display: none;">
@@ -135,8 +115,7 @@
                             
                             <div class="card-content">
                                 <svg class="card-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
-                                    <polyline points="17 2 12 7 7 2"></polyline>
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
                                 </svg>
                                 <h3 class="card-title">Sèries</h3>
                             </div>
@@ -147,18 +126,19 @@
                         <!-- Sèries Animades -->
                         <div class="category-card inactive" data-category="anime-series">
                             <div class="card-glass"></div>
-                            
+
                             <div class="hover-bubbles">
                                 <div class="floating-bubble bubble-1 gradient-anime-series"></div>
                                 <div class="floating-bubble bubble-2 gradient-anime-series"></div>
                                 <div class="floating-bubble bubble-3 gradient-anime-series"></div>
                             </div>
-                            
+
                             <div class="card-content">
                                 <svg class="card-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                    <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                                    <polyline points="17 2 12 7 7 2"></polyline>
                                 </svg>
-                                <h3 class="card-title">Sèries Animades</h3>
+                                <h3 class="card-title">Programes</h3>
                                 <span class="coming-soon">Properament</span>
                             </div>
                         </div>
