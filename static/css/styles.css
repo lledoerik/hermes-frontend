@@ -520,7 +520,7 @@ a {
     inset: 0;
     background: rgba(30, 41, 59, 0.3);
     backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid #07505a;
 }
 
 /* Hover Bubbles */
@@ -639,7 +639,7 @@ a {
 }
 
 .category-card.active:hover .hover-border {
-    border-color: rgba(255, 255, 255, 0.4);
+    border-color: #07505a;
 }
 
 /* Responsive Adjustments */
@@ -706,7 +706,7 @@ a {
         right: 18px;
         font-size: 18px;
     }
-        
+
     .card-title {
         font-size: 1.125rem;
     }
